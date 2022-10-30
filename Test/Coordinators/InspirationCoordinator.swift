@@ -17,8 +17,10 @@ final class InspirationCoordinator: Coordinator {
   
   func start() {
     let inspirationVC = InspirationViewController.instantiate()
-    inspirationVC.coordinator = self
-    inspirationVC.viewModel = InspirationViewModel()
+    
+    let viewModel = InspirationViewModel()
+    viewModel.coordinator = self
+    inspirationVC.viewModel = viewModel
     navigationController.setViewControllers([inspirationVC], animated: true)
   }
 }

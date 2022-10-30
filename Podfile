@@ -1,3 +1,5 @@
+inhibit_all_warnings!
+
 target 'Test' do
   use_frameworks!
   pod 'RxSwift'

@@ -8,7 +8,8 @@
 import UIKit
 
 final class InspirationViewController: UIViewController, Storyboardable {
-  weak var coordinator: InspirationCoordinator?
   var viewModel: InspirationViewModel!
 
+  
+  
 }

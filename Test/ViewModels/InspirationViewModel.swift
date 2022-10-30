@@ -8,4 +8,6 @@
 import Foundation
 
 final class InspirationViewModel {
+  weak var coordinator: InspirationCoordinator?
+
 }
