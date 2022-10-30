@@ -8,21 +8,22 @@
 import UIKit
 
 final class AppCoordinator: Coordinator {
-  var parentCoordinator: Coordinator?
   let window: UIWindow
   let navigationController: UINavigationController
   private(set) var children: [Coordinator] = []
   
   init(window: UIWindow) {
     self.window = window
-    self.navigationController = UINavigationController(
-      rootViewController: ViewController.instantiate()
-    )
+    self.navigationController = UINavigationController()
     window.rootViewController = navigationController
     window.makeKeyAndVisible()
   }
   
   func start() {
-    print(#function)
+    let startCoordinator = StartCoordinator(
+      navigationController: navigationController
+    )
+    children.append(startCoordinator)
+    startCoordinator.start()
   }
 }

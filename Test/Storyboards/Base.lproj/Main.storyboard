@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="BYZ-38-t0r" customClass="StartViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-Un-q48">
+                                <rect key="frame" x="64" y="396" width="262" height="52"/>
+                                <color key="backgroundColor" name="contentAccent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sZ0-20-65S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXk-GV-dha"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="backgroundPrimary"/>
+                        <constraints>
+                            <constraint firstItem="LoP-Un-q48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="3tb-R4-0zK"/>
+                            <constraint firstItem="LoP-Un-q48" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="76F-0B-WHP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LoP-Un-q48" secondAttribute="trailing" constant="64" id="Fzg-O1-uk1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.53846153846153" y="-2.1327014218009479"/>
+        </scene>
+        <!--Inspiration View Controller-->
+        <scene sceneID="zga-ve-45D">
+            <objects>
+                <viewController storyboardIdentifier="InspirationViewController" id="zM5-Nk-V7X" customClass="InspirationViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1n-pQ-yXd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lia-vT-hQa">
+                                <rect key="frame" x="24" y="734" width="342" height="52"/>
+                                <color key="backgroundColor" name="contentAccent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="lrj-6o-Ool"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6eD-pP-GWc">
+                                <rect key="frame" x="137.33333333333334" y="680" width="115.66666666666666" height="26"/>
+                                <color key="pageIndicatorTintColor" name="inactivePageControl"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DFZ-hp-RAY">
+                                <rect key="frame" x="0.0" y="147" width="390" height="525"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dtg-RZ-DIb">
+                                    <size key="itemSize" width="390" height="432"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InspirationCollectionViewCell" id="v68-Fg-0nJ" customClass="InspirationCollectionViewCell" customModule="Test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="432"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rr7-54-F1C">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="432"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="58L-Ce-XBb">
+                                                    <rect key="frame" x="28" y="0.0" width="334" height="432"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boostProdactivity" translatesAutoresizingMaskIntoConstraints="NO" id="ycw-lA-o51">
+                                                            <rect key="frame" x="7.6666666666666572" y="0.0" width="319" height="280"/>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-b4-aZ6">
+                                                            <rect key="frame" x="20" y="366.33333333333331" width="294" height="65.666666666666686"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boost Productivity" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztd-P7-cSI">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="28"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take your productivity to the next level" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcO-g6-326">
+                                                                    <rect key="frame" x="0.0" y="46" width="294" height="19.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="58L-Ce-XBb" firstAttribute="top" secondItem="rr7-54-F1C" secondAttribute="top" id="4av-mf-IEp"/>
+                                                <constraint firstAttribute="bottom" secondItem="58L-Ce-XBb" secondAttribute="bottom" id="One-vR-dz0"/>
+                                                <constraint firstAttribute="trailing" secondItem="58L-Ce-XBb" secondAttribute="trailing" constant="28" id="U9y-ia-W7P"/>
+                                                <constraint firstItem="58L-Ce-XBb" firstAttribute="leading" secondItem="rr7-54-F1C" secondAttribute="leading" constant="28" id="nPg-k8-sfc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="390" height="432"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B4C-DS-kCs"/>
+                        <color key="backgroundColor" name="backgroundPrimary"/>
+                        <constraints>
+                            <constraint firstItem="DFZ-hp-RAY" firstAttribute="leading" secondItem="B4C-DS-kCs" secondAttribute="leading" id="1wx-f1-WUm"/>
+                            <constraint firstItem="lia-vT-hQa" firstAttribute="leading" secondItem="B4C-DS-kCs" secondAttribute="leading" constant="24" id="Bug-ac-Cps"/>
+                            <constraint firstItem="lia-vT-hQa" firstAttribute="top" secondItem="6eD-pP-GWc" secondAttribute="bottom" constant="28" id="Fcy-df-AdH"/>
+                            <constraint firstAttribute="bottom" secondItem="lia-vT-hQa" secondAttribute="bottom" constant="58" id="L6D-Pt-lNB"/>
+                            <constraint firstItem="B4C-DS-kCs" firstAttribute="trailing" secondItem="lia-vT-hQa" secondAttribute="trailing" constant="24" id="PdG-U3-1eL"/>
+                            <constraint firstItem="DFZ-hp-RAY" firstAttribute="top" secondItem="N1n-pQ-yXd" secondAttribute="top" constant="147" id="QTk-ft-Idy"/>
+                            <constraint firstItem="6eD-pP-GWc" firstAttribute="top" secondItem="DFZ-hp-RAY" secondAttribute="bottom" constant="8" symbolic="YES" id="Z19-qa-dml"/>
+                            <constraint firstItem="6eD-pP-GWc" firstAttribute="centerX" secondItem="N1n-pQ-yXd" secondAttribute="centerX" id="elZ-At-oHh"/>
+                            <constraint firstItem="B4C-DS-kCs" firstAttribute="trailing" secondItem="DFZ-hp-RAY" secondAttribute="trailing" id="hbp-1e-S7A"/>
+                            <constraint firstItem="DFZ-hp-RAY" firstAttribute="centerX" secondItem="N1n-pQ-yXd" secondAttribute="centerX" id="zTn-xo-jg1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cet-6L-5cC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.23076923076917" y="-5.6872037914691944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="boostProdactivity" width="319" height="280"/>
+        <namedColor name="backgroundPrimary">
+            <color red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="contentAccent">
+            <color red="0.93725490196078431" green="0.53725490196078429" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="inactivePageControl">
+            <color red="0.50588235294117645" green="0.55686274509803924" blue="0.66274509803921566" alpha="0.40022813405422186" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
