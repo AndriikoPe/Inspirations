@@ -16,6 +16,8 @@ final class InspirationViewModel {
   
   private(set) lazy var inspirations = Observable.of(hardcodedInspirations)
   
+  private let bag = DisposeBag()
+  private let coreDataManager = CoreDataManager.shared
   private let hardcodedInspirations = [
     Inspiration(
       imageName: "boostProductivity",
@@ -33,6 +35,21 @@ final class InspirationViewModel {
       description: "Boosted productivity will help you achieve the desired goals"
     )
   ]
+  
+  init() {
+//    Uncomment to print how many times each screen has been shown.
+//    let seen = coreDataManager.fetchSeen()
+//    seen.forEach {
+//      print("Seen \($0.inspirationTitle ?? "something") \($0.timesShown) times")
+//    }
+    selectedIndex
+      .distinctUntilChanged()
+      .subscribe { [unowned self] in
+        coreDataManager.incrementSeen(
+          for: hardcodedInspirations[$0].title
+        )
+      }.disposed(by: bag)
+  }
   
   func nextTapped() {
     let nextIndex = 1 + ((try? selectedIndex.value()) ?? .zero)

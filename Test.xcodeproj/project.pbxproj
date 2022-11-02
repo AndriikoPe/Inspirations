@@ -29,6 +29,8 @@
 		BFF35A452911E1B40039313B /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A442911E1B40039313B /* TimerViewController.swift */; };
 		BFF35A472911E53E0039313B /* TimerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A462911E53E0039313B /* TimerCoordinator.swift */; };
 		BFF35A492911E5A50039313B /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A482911E5A50039313B /* TimerViewModel.swift */; };
+		BFF35A4C2912EFC10039313B /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A4A2912EFC10039313B /* Test.xcdatamodeld */; };
+		BFF35A4E2912F0C40039313B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A4D2912F0C40039313B /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		BFF35A442911E1B40039313B /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BFF35A462911E53E0039313B /* TimerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCoordinator.swift; sourceTree = "<group>"; };
 		BFF35A482911E5A50039313B /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		BFF35A4B2912EFC10039313B /* ScreenShown.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScreenShown.xcdatamodel; sourceTree = "<group>"; };
+		BFF35A4D2912F0C40039313B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C3BD8EEAEEEB095B24C40D4B /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F29503F9F9D4228AD318EE55 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BF95B4A8290C79F6006F26DA /* AppDelegate.swift */,
+				BFF35A4F2912F0C80039313B /* CoreData */,
 				BFDE5690290DD9CE00BC3FCF /* Coordinators */,
 				BFDE5695290DDD0300BC3FCF /* ViewModels */,
 				BF0557AC290F1A560021DB7D /* Models */,
@@ -206,6 +211,15 @@
 				BFDE569F290F14C200BC3FCF /* InspirationCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BFF35A4F2912F0C80039313B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BFF35A4A2912EFC10039313B /* Test.xcdatamodeld */,
+				BFF35A4D2912F0C40039313B /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +344,7 @@
 				BF95B4BD290C806F006F26DA /* Coordinator.swift in Sources */,
 				BF49F453290DD439000FB908 /* UIColor+Extensions.swift in Sources */,
 				BFDE5699290DDD4C00BC3FCF /* StartCoordinator.swift in Sources */,
+				BFF35A4E2912F0C40039313B /* CoreDataManager.swift in Sources */,
 				BFF35A472911E53E0039313B /* TimerCoordinator.swift in Sources */,
 				BFDE569B290E7FE200BC3FCF /* InspirationCoordinator.swift in Sources */,
 				BF95B4AD290C79F7006F26DA /* StartViewController.swift in Sources */,
@@ -341,6 +356,7 @@
 				BFF35A452911E1B40039313B /* TimerViewController.swift in Sources */,
 				BF49F451290DD206000FB908 /* Storyboardable.swift in Sources */,
 				BF95B4A9290C79F6006F26DA /* AppDelegate.swift in Sources */,
+				BFF35A4C2912EFC10039313B /* Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +580,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFF35A4A2912EFC10039313B /* Test.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFF35A4B2912EFC10039313B /* ScreenShown.xcdatamodel */,
+			);
+			currentVersion = BFF35A4B2912EFC10039313B /* ScreenShown.xcdatamodel */;
+			path = Test.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF95B49D290C79F6006F26DA /* Project object */;
 }
