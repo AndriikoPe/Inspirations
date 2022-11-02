@@ -39,8 +39,9 @@ final class TimerViewController: UIViewController, Storyboardable {
           animated: true
         )
         self.timerLabel.text = self.viewModel.millisecondsToTime(seconds)
-      }, onCompleted: { [weak self] in
-        self?.continueButton.isEnabled = true
+      }, onCompleted: { [continueButton] in
+        continueButton?.isEnabled = true
+        continueButton?.backgroundColor = .contentAccent
       })
       .disposed(by: bag)
   }
