@@ -188,7 +188,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-5o-M76">
                                 <rect key="frame" x="24" y="211" width="342" height="422"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32z-tR-7P3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="32z-tR-7P3">
                                         <rect key="frame" x="28" y="96" width="286" height="82.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="68"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,7 +236,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOb-IB-faO"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.7035360778404387" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xTg-5o-M76" firstAttribute="height" secondItem="irb-dX-TbX" secondAttribute="height" multiplier="0.5" id="bfg-zg-JDe"/>
                             <constraint firstItem="xTg-5o-M76" firstAttribute="centerX" secondItem="irb-dX-TbX" secondAttribute="centerX" id="cch-zr-5LY"/>
@@ -245,6 +245,11 @@
                             <constraint firstItem="xTg-5o-M76" firstAttribute="centerY" secondItem="irb-dX-TbX" secondAttribute="centerY" id="zl0-Av-1Lc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="rcE-Ob-FIa" id="njX-t8-BfQ"/>
+                        <outlet property="progressView" destination="N6F-jU-xZo" id="t4h-RH-ZbY"/>
+                        <outlet property="timerLabel" destination="32z-tR-7P3" id="Dih-uk-ghN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8o-oM-4Ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -37,7 +37,7 @@ final class InspirationViewModel {
   func nextTapped() {
     let nextIndex = 1 + ((try? selectedIndex.value()) ?? .zero)
     if (try? isLastPage.value()) == true {
-      print("Continue")
+      coordinator?.gotoTimer()
     } else if hardcodedInspirations.indices.contains(nextIndex) {
       selectedIndex.onNext(nextIndex)
     }

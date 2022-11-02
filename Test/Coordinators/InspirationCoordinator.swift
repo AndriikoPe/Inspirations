@@ -23,4 +23,12 @@ final class InspirationCoordinator: Coordinator {
     inspirationVC.viewModel = viewModel
     navigationController.setViewControllers([inspirationVC], animated: true)
   }
+  
+  func gotoTimer() {
+    let timerCoordinator = TimerCoordinator(
+      navigationController: navigationController
+    )
+    children.append(timerCoordinator)
+    timerCoordinator.start()
+  }
 }

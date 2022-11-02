@@ -28,7 +28,7 @@
 		BFDE56A2290F153A00BC3FCF /* InspirationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE56A1290F153A00BC3FCF /* InspirationViewModel.swift */; };
 		BFF35A452911E1B40039313B /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A442911E1B40039313B /* TimerViewController.swift */; };
 		BFF35A472911E53E0039313B /* TimerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A462911E53E0039313B /* TimerCoordinator.swift */; };
-		BFF35A492911E5A50039313B /* TimverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A482911E5A50039313B /* TimverViewModel.swift */; };
+		BFF35A492911E5A50039313B /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF35A482911E5A50039313B /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +55,7 @@
 		BFDE56A1290F153A00BC3FCF /* InspirationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationViewModel.swift; sourceTree = "<group>"; };
 		BFF35A442911E1B40039313B /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BFF35A462911E53E0039313B /* TimerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCoordinator.swift; sourceTree = "<group>"; };
-		BFF35A482911E5A50039313B /* TimverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimverViewModel.swift; sourceTree = "<group>"; };
+		BFF35A482911E5A50039313B /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		C3BD8EEAEEEB095B24C40D4B /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F29503F9F9D4228AD318EE55 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				BFDE56A1290F153A00BC3FCF /* InspirationViewModel.swift */,
-				BFF35A482911E5A50039313B /* TimverViewModel.swift */,
+				BFF35A482911E5A50039313B /* TimerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				BFF35A472911E53E0039313B /* TimerCoordinator.swift in Sources */,
 				BFDE569B290E7FE200BC3FCF /* InspirationCoordinator.swift in Sources */,
 				BF95B4AD290C79F7006F26DA /* StartViewController.swift in Sources */,
-				BFF35A492911E5A50039313B /* TimverViewModel.swift in Sources */,
+				BFF35A492911E5A50039313B /* TimerViewModel.swift in Sources */,
 				BFDE56A0290F14C200BC3FCF /* InspirationCollectionViewCell.swift in Sources */,
 				BFDE569D290E800B00BC3FCF /* InspirationViewController.swift in Sources */,
 				BFDE56A2290F153A00BC3FCF /* InspirationViewModel.swift in Sources */,

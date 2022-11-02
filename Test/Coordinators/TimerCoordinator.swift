@@ -19,5 +19,11 @@ final class TimerCoordinator: Coordinator {
   func start() {
     let timerVC = TimerViewController.instantiate()
     
+    let viewModel = TimerViewModel()
+    viewModel.coordinator = self
+    timerVC.viewModel = viewModel
+    timerVC.modalPresentationStyle = .overFullScreen
+    timerVC.modalTransitionStyle = .crossDissolve
+    navigationController.present(timerVC, animated: true)
   }
 }
