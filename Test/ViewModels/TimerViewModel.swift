@@ -12,8 +12,8 @@ import RxCocoa
 final class TimerViewModel {
   weak var coordinator: TimerCoordinator?
   
-  let totalTime: Float = 60.0
   let timer: Observable<Int>
+  private let totalMilliseconds: Float = 60 * 1000.0
   
   private let formatter: DateComponentsFormatter = {
     let formatter = DateComponentsFormatter()
@@ -26,17 +26,21 @@ final class TimerViewModel {
   init() {
     timer = Observable<Int>.timer(
       .seconds(0),
-      period: .seconds(1),
+      period: .milliseconds(1),
       scheduler: MainScheduler.instance
     )
-      .take(Int(totalTime) + 1)
+      .take(Int(totalMilliseconds) + 1)
   }
   
-  func secondsToTime(_ seconds: Int) -> String {
-    formatter.string(from: TimeInterval(seconds)) ?? ""
+  func millisecondsToTime(_ seconds: Int) -> String {
+    formatter.string(from: TimeInterval(seconds / 1000)) ?? ""
   }
   
-  func progress(from seconds: Int) -> Float {
-    Float(seconds) / totalTime
+  func progress(from milliseconds: Int) -> Float {
+    Float(milliseconds) / (totalMilliseconds)
+  }
+  
+  func continueTapped() {
+    coordinator?.dismiss()
   }
 }

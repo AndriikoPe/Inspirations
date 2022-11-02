@@ -7,23 +7,28 @@
 
 import UIKit
 
-final class TimerCoordinator: Coordinator {
-  private(set) var children: [Coordinator] = []
+final class TimerCoordinator: BaseCoordinator {
+  let router: Routing
   
-  let navigationController: UINavigationController
+  private weak var timerVC: TimerViewController?
   
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
+  init(router: Routing) {
+    self.router = router
   }
   
-  func start() {
+  override func start() {
     let timerVC = TimerViewController.instantiate()
-    
+    self.timerVC = timerVC
     let viewModel = TimerViewModel()
     viewModel.coordinator = self
     timerVC.viewModel = viewModel
     timerVC.modalPresentationStyle = .overFullScreen
     timerVC.modalTransitionStyle = .crossDissolve
-    navigationController.present(timerVC, animated: true)
+    router.present(timerVC, isAnimated: true, onDismiss: isCompleted) 
+    Defaults.timerShown = true
+  }
+  
+  func dismiss() {
+    timerVC?.dismiss(animated: true)
   }
 }

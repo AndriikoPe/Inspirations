@@ -87,6 +87,22 @@ final class InspirationViewController: UIViewController, Storyboardable {
         nextButton?.setTitle(isLast ? "Continue" : "Next", for: .normal)
       }
       .disposed(by: bag)
+    
+    viewModel
+      .showAlert
+      .subscribe(onNext: showAlert)
+      .disposed(by: bag)
+  }
+  
+  private func showAlert() {
+    let alert = UIAlertController(
+      title: viewModel.alertTitle,
+      message: viewModel.alertBody,
+      preferredStyle: .alert
+    )
+    let okAction = UIAlertAction(title: "Ok", style: .default)
+    alert.addAction(okAction)
+    present(alert, animated: true)
   }
   
   @IBAction private func nextTapped(_ sender: Any) {

@@ -214,6 +214,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueTapped:" destination="7oL-jF-P7b" eventType="touchUpInside" id="Ybk-EF-2cT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundPrimary"/>

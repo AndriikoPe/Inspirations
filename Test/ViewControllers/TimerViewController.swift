@@ -38,7 +38,7 @@ final class TimerViewController: UIViewController, Storyboardable {
           self.viewModel.progress(from: seconds),
           animated: true
         )
-        self.timerLabel.text = self.viewModel.secondsToTime(seconds)
+        self.timerLabel.text = self.viewModel.millisecondsToTime(seconds)
       }, onCompleted: { [weak self] in
         self?.continueButton.isEnabled = true
       })
@@ -46,6 +46,6 @@ final class TimerViewController: UIViewController, Storyboardable {
   }
   
   @IBAction private func continueTapped(_ sender: UIButton) {
-    
+    viewModel.continueTapped()
   }
 }

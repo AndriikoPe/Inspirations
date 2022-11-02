@@ -13,6 +13,9 @@ final class InspirationViewModel {
   weak var coordinator: InspirationCoordinator?
   let selectedIndex = BehaviorSubject(value: 0)
   let isLastPage = BehaviorSubject(value: false)
+  let showAlert = PublishSubject<Void>()
+  let alertTitle = "Thank you for your interest"
+  let alertBody = "The functionality is under development"
   
   private(set) lazy var inspirations = Observable.of(hardcodedInspirations)
   
@@ -54,7 +57,11 @@ final class InspirationViewModel {
   func nextTapped() {
     let nextIndex = 1 + ((try? selectedIndex.value()) ?? .zero)
     if (try? isLastPage.value()) == true {
-      coordinator?.gotoTimer()
+      if Defaults.timerShown {
+        showAlert.onNext(())
+      } else {
+        coordinator?.gotoTimer()
+      }
     } else if hardcodedInspirations.indices.contains(nextIndex) {
       selectedIndex.onNext(nextIndex)
     }

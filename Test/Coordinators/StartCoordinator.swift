@@ -7,24 +7,21 @@
 
 import UIKit
 
-final class StartCoordinator: Coordinator {
-  let navigationController: UINavigationController
-  private(set) var children: [Coordinator] = []
+final class StartCoordinator: BaseCoordinator {
+  let router: Routing
   
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
+  init(router: Routing) {
+    self.router = router
   }
   
-  func start() {
+  override func start() {
     let startVC = StartViewController.instantiate()
     startVC.coordinator = self
-    navigationController.setViewControllers([startVC], animated: true)
+    router.setViewControllers([startVC], isAnimated: true)
   }
   
   func gotoInspiration() {
-    let inspirationCoordinator = InspirationCoordinator(
-      navigationController: navigationController
-    )
+    let inspirationCoordinator = InspirationCoordinator(router: router)
     children.append(inspirationCoordinator)
     inspirationCoordinator.start()
   }

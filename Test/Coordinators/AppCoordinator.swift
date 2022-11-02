@@ -7,22 +7,20 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: BaseCoordinator {
   let window: UIWindow
-  let navigationController: UINavigationController
-  private(set) var children: [Coordinator] = []
+  let router: Routing
+  private let navigationController = UINavigationController()
   
   init(window: UIWindow) {
     self.window = window
-    self.navigationController = UINavigationController()
+    self.router = Router(navigationController: navigationController)
     window.rootViewController = navigationController
     window.makeKeyAndVisible()
   }
   
-  func start() {
-    let startCoordinator = StartCoordinator(
-      navigationController: navigationController
-    )
+  override func start() {
+    let startCoordinator = StartCoordinator(router: router)
     children.append(startCoordinator)
     startCoordinator.start()
   }

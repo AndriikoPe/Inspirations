@@ -7,28 +7,29 @@
 
 import UIKit
 
-final class InspirationCoordinator: Coordinator {
-  private(set) var children: [Coordinator] = []
-  let navigationController: UINavigationController
+final class InspirationCoordinator: BaseCoordinator {
+  let router: Routing
   
-  init(navigationController: UINavigationController) {
-    self.navigationController = navigationController
+  init(router: Routing) {
+    self.router = router
   }
   
-  func start() {
+  override func start() {
     let inspirationVC = InspirationViewController.instantiate()
     
     let viewModel = InspirationViewModel()
     viewModel.coordinator = self
     inspirationVC.viewModel = viewModel
-    navigationController.setViewControllers([inspirationVC], animated: true)
+    router.setViewControllers([inspirationVC], isAnimated: true)
   }
   
   func gotoTimer() {
-    let timerCoordinator = TimerCoordinator(
-      navigationController: navigationController
-    )
+    let timerCoordinator = TimerCoordinator(router: router)
     children.append(timerCoordinator)
+    timerCoordinator.isCompleted = { [weak self, weak timerCoordinator] in
+      guard let coordinator = timerCoordinator else { return }
+      self?.remove(coordinator: coordinator)
+    }
     timerCoordinator.start()
   }
 }
